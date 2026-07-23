@@ -1,0 +1,28 @@
+[package]
+name = "cherrym-desktop"
+version = "0.1.0"
+description = "A Tauri App about Music Player just for some personal experience"
+authors = ["LuisGFNunes"]
+edition = "2021"
+
+[lib]
+name = "cherrym_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "stream"] }
+rusty_ytdl = "0.7"
+axum = "0.7"
+futures-util = "0.3"
+
+
+
+
